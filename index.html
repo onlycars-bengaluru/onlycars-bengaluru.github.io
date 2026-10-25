@@ -71,6 +71,7 @@ h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:6px}
 .tabs button[aria-selected="true"]{background:#fff;color:var(--navy);border-color:#fff}
 .panel{max-width:60ch;min-height:96px}
 .panel h3{font-size:1.5rem;margin-bottom:8px}
+.panel img{display:block;width:100%;max-width:60ch;height:auto;border-radius:12px;margin-top:16px}
 .facts{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:18px;padding-top:16px;border-top:1px solid #fff3}
 .facts div{font-weight:600}
 .contact .box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
@@ -165,9 +166,10 @@ var D=[["Gloss PPF","A clear, glossy film that keeps your paint looking as it di
 ["Self-healing PPF","Light scratches and swirl marks fade on their own with heat from the sun or warm water. Backed by a 10-year warranty*."],
 ["Colour wrap","Change your car’s colour without repainting. A wrap can be removed later."],
 ["Sun film","Window film that cuts heat and glare so the cabin stays more comfortable."]];
+var IMG=["images/glossy_ppf.png","images/matte_ppf.png","images/self_healing_ppf.png","images/colour_wrap.png","images/sun_film.png"];
 var tabs=document.querySelectorAll('[role=tab]'),p=document.getElementById('panel');
 function show(i){tabs.forEach(function(t,k){t.setAttribute('aria-selected',k==i)});
-p.innerHTML='';var h=document.createElement('h3');h.textContent=D[i][0];var q=document.createElement('p');q.textContent=D[i][1];p.appendChild(h);p.appendChild(q)}
+p.innerHTML='';var h=document.createElement('h3');h.textContent=D[i][0];var q=document.createElement('p');q.textContent=D[i][1];p.appendChild(h);p.appendChild(q);var m=document.createElement('img');m.src=IMG[i];m.alt=D[i][0];m.loading='lazy';p.appendChild(m)}
 tabs.forEach(function(t){t.addEventListener('click',function(){show(+t.dataset.i)})});show(0);
 var mb=document.getElementById('moreBtn'),cg=document.getElementById('carGrid');
 mb.addEventListener('click',function(){var o=cg.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Show fewer cars':'View more available cars'});
