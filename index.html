@@ -23,19 +23,19 @@ a{color:inherit}
 .btn.red{background:var(--red);color:#fff}
 .btn.ghost{border-color:currentColor}
 header{background:#fff;color:#031A49}
-.top{display:flex;flex-direction:column;align-items:center;gap:18px;padding:16px 0 0}
+.top{display:flex;flex-direction:column;align-items:center;gap:10px;padding:10px 0 0}
 .logo{display:block}
-.logo img{height:78px;max-width:80vw;width:auto;display:block}
-.hero{padding:26px 0 56px;text-align:center}
+.logo img{height:64px;max-width:80vw;width:auto;display:block}
+.hero{padding:14px 0 28px;text-align:center}
 .hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;max-width:18ch;margin:0 auto}
-.hero p{max-width:50ch;font-size:1.05rem;margin:18px auto 26px;opacity:.9}
+.hero p{max-width:50ch;font-size:1.05rem;margin:12px auto 18px;opacity:.9}
 .hero .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 .strip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;width:100%}
 .strip a{flex:1 1 170px;max-width:260px;text-decoration:none;background:#F1F4FA;border:1px solid #DDE1EC;border-radius:14px;padding:10px 16px;text-align:center;line-height:1.3}
 .strip span{display:block;font-size:.8rem;color:#55607A}
 .strip b{font-weight:600;color:#031A49}
 .strip a:hover{border-color:#E50302}
-.pill{display:inline-block;background:#FDECEC;color:#B00201;border-radius:999px;padding:6px 16px;font-weight:600;font-size:.9rem;margin-bottom:18px}
+.pill{display:inline-block;background:#FDECEC;color:#B00201;border-radius:999px;padding:6px 16px;font-weight:600;font-size:.9rem;margin-bottom:10px}
 .hero p.small{font-size:.9rem;margin:12px auto 0;opacity:.75}
 .hero p.links{margin:14px auto 0;font-size:.95rem}
 .links a{margin:0 12px;font-weight:600}
@@ -45,19 +45,23 @@ body{padding-bottom:68px}
 footer a{margin-left:12px}
 .num.sm{font-size:clamp(1.2rem,4vw,1.6rem)}
 .stripe{height:6px;background:linear-gradient(90deg,var(--red) 0 30%,transparent 30%)}
-section{padding:56px 0}
-h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:8px}
-.lead{color:var(--muted);max-width:56ch;margin:0 0 28px}
-.cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.car{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;position:relative}
+section{padding:32px 0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:6px}
+.lead{color:var(--muted);max-width:56ch;margin:0 0 16px}
+.cars{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.car.more{display:none}
+.cars.open .car.more{display:block}
+.morewrap{text-align:center;margin-top:16px}
+.morewrap button{font:600 1rem Figtree,system-ui,sans-serif;cursor:pointer;background:none;color:inherit}
+.car{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px;position:relative}
 .tag{position:absolute;top:14px;right:14px;font-size:.75rem;background:var(--line);color:var(--muted);padding:2px 10px;border-radius:999px}
 .car img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
-.car h3{font-size:1.3rem;margin:18px 0 12px}
-.car dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0 0 16px}
+.car h3{font-size:1.25rem;margin:12px 0 8px}
+.car dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0}
 .car dt{color:var(--muted)}.car dd{margin:0;font-weight:600}
 .price{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.4rem;color:var(--red)}
-.note{color:var(--muted);font-size:.9rem;margin-top:18px}
-.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.note{color:var(--muted);font-size:.9rem;margin-top:12px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .why h3{font-size:1.15rem;margin-bottom:6px;padding-top:12px;border-top:3px solid var(--red)}
 .why p{margin:0;color:var(--muted)}
 .ppf{background:var(--hero);color:var(--hero-ink)}
@@ -65,13 +69,13 @@ h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:8px}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
 .tabs button{font:600 1rem Figtree,sans-serif;padding:10px 18px;border-radius:999px;border:2px solid #fff6;background:none;color:inherit;cursor:pointer}
 .tabs button[aria-selected="true"]{background:#fff;color:var(--navy);border-color:#fff}
-.panel{max-width:60ch;min-height:120px}
+.panel{max-width:60ch;min-height:96px}
 .panel h3{font-size:1.5rem;margin-bottom:8px}
-.facts{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:32px;padding-top:24px;border-top:1px solid #fff3}
+.facts{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:18px;padding-top:16px;border-top:1px solid #fff3}
 .facts div{font-weight:600}
-.contact .box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.contact .box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
 .num{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--red);text-decoration:none}
-footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+footer{padding:18px 0 22px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -95,20 +99,18 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px sol
 <div class="wrap">
 <h2>Cars for sale</h2>
 <p class="lead">Every car is cleaned and checked before we sell it to you. Ask us for the paperwork and ownership history before you decide.</p>
-<div class="cars">
+<div class="cars" id="carGrid">
 <article class="car"><img src="images/fortuner.jpg" alt="Toyota Fortuner 4x2 diesel automatic" loading="lazy" onerror="this.remove()">
 <h3>Toyota Fortuner 4x2, diesel Automatic</h3>
-<dl><dt>Year</dt><dd>2012</dd><dt>Owners</dt><dd>2nd owner</dd><dt>Gearbox</dt><dd>Automatic</dd><dt>Registration</dt><dd>KA05(Karnataka)</dd></dl>
-<div class="price">₹ Price on call</div></article>
-<article class="car"><img src="images/honda-city.jpg" alt="Honda City VX petrol automatic" loading="lazy" onerror="this.remove()">
+<dl><dt>Year</dt><dd>2012</dd><dt>Owners</dt><dd>2nd owner</dd><dt>Gearbox</dt><dd>Automatic</dd><dt>Registration</dt><dd>KA05(Karnataka)</dd></dl></article>
+<article class="car more"><img src="images/honda-city.jpg" alt="Honda City VX petrol automatic" loading="lazy" onerror="this.remove()">
 <h3>Honda City VX, petrol Automatic</h3>
-<dl><dt>Year</dt><dd>2018</dd><dt>Driven</dt><dd>31,000 km</dd><dt>Owners</dt><dd>1st owner</dd><dt>Gearbox</dt><dd>Automatic</dd><dt>Registration</dt><dd>KA03(Karnataka)</dd></dl>
-<div class="price">₹ Price on call</div></article>
-<article class="car"><img src="images/thar.jpg" alt="Mahindra Thar 4x4 LX petrol automatic" loading="lazy" onerror="this.remove()">
+<dl><dt>Year</dt><dd>2018</dd><dt>Driven</dt><dd>31,000 km</dd><dt>Owners</dt><dd>1st owner</dd><dt>Gearbox</dt><dd>Automatic</dd><dt>Registration</dt><dd>KA03(Karnataka)</dd></dl></article>
+<article class="car more"><img src="images/thar.jpg" alt="Mahindra Thar 4x4 LX petrol automatic" loading="lazy" onerror="this.remove()">
 <h3>Thar 4x4 LX, petrol Automatic</h3>
-<dl><dt>Year</dt><dd>2021</dd><dt>Driven</dt><dd>64,000 km</dd><dt>Owners</dt><dd>1st owner</dd><dt>Gearbox</dt><dd>Automatic</dd><dt>Registration</dt><dd>KA51(Karnataka)</dd></dl>
-<div class="price">₹ Price on call</div></article>
+<dl><dt>Year</dt><dd>2021</dd><dt>Driven</dt><dd>64,000 km</dd><dt>Owners</dt><dd>1st owner</dd><dt>Gearbox</dt><dd>Automatic</dd><dt>Registration</dt><dd>KA51(Karnataka)</dd></dl></article>
 </div>
+<div class="morewrap"><button type="button" class="btn ghost" id="moreBtn" aria-expanded="false" aria-controls="carGrid">View more available cars</button></div>
 <p class="note">Call or WhatsApp 8970312345 for the cars available now, or to sell yours.</p>
 </div>
 </section>
@@ -138,7 +140,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px sol
 </div>
 <div class="panel" role="tabpanel" id="panel"></div>
 <div class="facts"><div>Self-healing PPF</div><div>10-year warranty*</div><div>Doorstep service</div><div>Free quote</div></div>
-<p class="lead" style="margin:18px 0 0;font-size:.9rem">*Warranty terms apply. Price depends on car model and film type.</p>
+<p class="lead" style="margin:10px 0 0;font-size:.9rem">*Warranty terms apply. Price depends on car model and film type.</p>
 </div>
 </section>
 
@@ -167,6 +169,8 @@ var tabs=document.querySelectorAll('[role=tab]'),p=document.getElementById('pane
 function show(i){tabs.forEach(function(t,k){t.setAttribute('aria-selected',k==i)});
 p.innerHTML='';var h=document.createElement('h3');h.textContent=D[i][0];var q=document.createElement('p');q.textContent=D[i][1];p.appendChild(h);p.appendChild(q)}
 tabs.forEach(function(t){t.addEventListener('click',function(){show(+t.dataset.i)})});show(0);
+var mb=document.getElementById('moreBtn'),cg=document.getElementById('carGrid');
+mb.addEventListener('click',function(){var o=cg.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Show fewer cars':'View more available cars'});
 </script>
 </body>
 </html>
